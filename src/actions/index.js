@@ -5,7 +5,18 @@ import {browserHistory} from 'react-router'
 const URL = 'http://localhost:3000/api/v1/'
 
 export const fetchParks = () => {
-  axios.get(URL + 'parks').then()
+  const parks = axios.get(URL + 'parks').then(response => response.data)
+  return {
+    type: "FETCH_PARKS",
+    payload: parks
+  }
+}
+
+export const updateCurrentPark = (park) => {
+  return {
+    type: "UPDATE_CURRENT_PARK",
+    payload: park
+  }
 }
 
 

@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux'
-import genericReducer from './genericReducer'
+import parksReducer from './parksReducer'
 import usersReducer from './usersReducer'
+import currentParkReducer from './currentParkReducer'
 
-export default combineReducers({generic: genericReducer, users: usersReducer})
+export default combineReducers({
+    parks: parksReducer,
+    currentPark: currentParkReducer,
+    users: usersReducer
+  })

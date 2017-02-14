@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ParkThumbnail from './ParkThumbnail'
+import { fetchParks } from '../actions/index.js'
 
-const parks = ['park1', 'park2', 'park3']
 
 
 class ParkList extends Component {
 
+  componentDidMount(){
+    this.props.fetchParks()
+  }
 
   render() {
-    var list = parks.map(park => <li><ParkThumbnail/></li>)
+    var list = this.props.parks.map(park => <li><ParkThumbnail park = {park}/></li>)
     return (
       <div className="ParkList">
         <ul>
@@ -20,4 +24,14 @@ class ParkList extends Component {
   }
 }
 
-export default ParkList
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({fetchParks}, dispatch)
+}
+
+function mapStateToProps(state) {
+  return {
+    parks: state.parks
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ParkList)
