@@ -12,7 +12,7 @@ export const fetchParks = () => {
 export const createUser = (user) => {
   const response = axios.post(URL + 'signup', user).then((userData) => {
     sessionStorage.setItem('jwt', userData.data.jwt)
-    // browserHistory.push('/parks')
+    browserHistory.push('/parks')
     return userData
   })
 
