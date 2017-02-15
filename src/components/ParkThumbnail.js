@@ -13,8 +13,8 @@ class ParkThumbnail extends Component {
   render() {
     return (
       <div onClick= {this.handleClick.bind(this)} className="ParkThumbnail">
-        <h4>{this.props.park.name}</h4>
-        <h5>{this.props.park.location}</h5>
+        <h4 className="ParkThumbnailText">{this.props.park.name}</h4>
+        <h5 className="ParkThumbnailText">{this.props.park.location}</h5>
       </div>
     )
   }

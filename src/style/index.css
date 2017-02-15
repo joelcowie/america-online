@@ -9,3 +9,14 @@ body {
   background-image: url('https://www.aviary.com/img/photo-landscape.jpg');
   padding: 500px;
 }
+
+
+.ParkThumbnail {
+  padding: 20px;
+  margin: 0px 1000px 0px 0px;
+  background-image: url('https://www.aviary.com/img/photo-landscape.jpg');
+}
+
+.ParkThumbnailText {
+  color: white;
+}
