@@ -12,9 +12,9 @@ class ParkThumbnail extends Component {
 
   render() {
     return (
-      <div onClick= {this.handleClick.bind(this)} className="ParkThumbnail">
+      <div style = {{color: 'white', backgroundImage: "url('http://i.imgur.com/uVnhkNR.jpg')", height: '300px', width: '400px', backgroundSize: '400px 300px', padding: '0px 0px', margin: '0px 0px'}} onClick= {this.handleClick.bind(this)} className="ParkThumbnail">
         <h4>{this.props.park.name}</h4>
-        <h5>{this.props.park.location}</h5>
+        <h5>{this.props.park.states}</h5>
       </div>
     )
   }
