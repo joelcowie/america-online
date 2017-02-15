@@ -4,13 +4,6 @@ import {browserHistory} from 'react-router'
 
 const URL = 'http://localhost:3000/api/v1/'
 
-var config = {
-  headers: {'Authorization': 'DF1C7C58-FBFD-4B3D-AC24-5B33CC02E88E'}
-}
-
-var parksApi = axios.get('https://developer.nps.gov/api/v0/parks', config).then(response => response.data)
-debugger
-// ?parkCode=yell,yose
 
 export const fetchParks = () => {
   const parks = axios.get(URL + 'parks').then(response => response.data)
