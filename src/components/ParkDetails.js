@@ -6,7 +6,7 @@ class ParkDetails extends Component {
 
   render() {
     if (!this.props.currentPark) {
-      return <div>Welcome to the RoadTripper!</div>
+      return <div></div>
     }
 
     return (

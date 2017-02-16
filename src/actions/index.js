@@ -28,8 +28,18 @@ export const createUser = (user) => {
     return userData
   })
 
+
   return {
     type: "CREATE_USER",
+    payload: response
+  }
+}
+
+export const createTrip = (trip) => {
+  const response = axios.post(URL + 'trip', trip).then(response => response.data)
+
+  return {
+    type: "CREATE_TRIP",
     payload: response
   }
 }
