@@ -2,7 +2,7 @@ body {
   margin: 40px;
   padding: 0;
   font-family: sans-serif;
-  background: white;
+  background: black;
 }
 
 .user-sign-up {
@@ -17,14 +17,24 @@ body {
 }
 
 .ParkThumbnailText {
-  color: black;
+  color: white;
+
+}
+
+.ParkDetailsText {
+  color: white;
+  margin: 30px;
 
 }
 
 .ParkDetails {
-  height: 600px;
+  height: 750px;
 }
 
-.ParkList {
+ul {
+  margin: 0px;
+}
 
+.AppTitle {
+  text: white;
 }
