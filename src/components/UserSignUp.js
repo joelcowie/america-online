@@ -12,6 +12,10 @@ class UserSignUp extends Component{
   }
 
   render() {
+    if (!this.props.signUp) {
+      return <div></div>
+    }
+
     return (
       <div className="user-sign-up fl w-third">
         <form onSubmit={this.handleSubmit.bind(this)}>
@@ -30,4 +34,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({createUser}, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(UserSignUp)
+function mapStateToProps(state) {
+  return {signUp: state.signUp}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserSignUp)

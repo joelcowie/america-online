@@ -24,7 +24,6 @@ export const updateCurrentPark = (park) => {
 export const createUser = (user) => {
   const response = axios.post(URL + 'signup', user).then((userData) => {
     sessionStorage.setItem('jwt', userData.data.jwt)
-    browserHistory.push('/parks')
     return userData
   })
 
@@ -36,10 +35,54 @@ export const createUser = (user) => {
 }
 
 export const createTrip = (trip) => {
-  const response = axios.post(URL + 'trip', trip).then(response => response.data)
+  const jwt = sessionStorage.getItem('jwt')
+  const response = axios.post(URL + 'trip', {trip: trip, jwt: jwt}).then(response => response.data)
 
   return {
     type: "CREATE_TRIP",
     payload: response
+  }
+}
+
+export const logInUser = (user) => {
+  const response = axios.post(URL + 'login', user).then((userData) => {
+    sessionStorage.setItem('jwt', userData.data.jwt)
+    return userData
+  })
+
+  return {
+    type: "LOG_IN_USER",
+    payload: response
+  }
+}
+
+ export const fetchUser = (jwt) => {
+   const response = axios.post(URL + 'current', jwt).then(response => response.data)
+
+   return {
+     type: "FETCH_USER",
+     payload: response
+   }
+
+ }
+
+ export const logOutUser = () => {
+   return {
+     type: "LOG_OUT_USER",
+     payload: {}
+   }
+ }
+
+export const loginRender = () => {
+  return {
+    type: "LOGIN_RENDER",
+    payload: true
+  }
+}
+
+export const signUpRender = () => {
+  return {
+    type: "SIGN_UP_RENDER",
+    payload: true
   }
 }

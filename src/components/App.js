@@ -9,9 +9,18 @@ import ParkThumbnail from './ParkThumbnail'
 import UserSignUp from './UserSignUp'
 import Nav from './Nav'
 import TripForm from './TripForm'
-
+import UserLogIn from './UserLogIn'
+import {fetchUser} from '../actions/index.js'
+import {bindActionCreators} from 'redux'
 
 class App extends Component {
+
+  componentDidMount() {
+    if (sessionStorage.length !== 0) {
+      this.props.fetchUser()
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -26,9 +35,16 @@ class App extends Component {
         <ParkList>
           <ParkThumbnail/>
         </ParkList>
+        <UserLogIn/>
       </div>
     )
   }
 }
 
-export default App
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({fetchUser}, dispatch)
+}
+
+
+
+export default connect(null, mapDispatchToProps)(App)

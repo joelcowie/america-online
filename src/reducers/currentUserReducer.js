@@ -1,7 +1,11 @@
 export default (state={}, action) => {
   switch (action.type) {
-    case "CREATE_USER":
+    case "FETCH_USER":
+      return action.payload
+    case "LOG_IN_USER":
       return action.payload.data
+    case "LOG_OUT_USER":
+      return action.payload
     default:
       return state
     }
