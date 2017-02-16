@@ -4,6 +4,7 @@ import {browserHistory} from 'react-router'
 
 const URL = 'http://localhost:3000/api/v1/'
 
+
 export const fetchParks = () => {
   const parks = axios.get(URL + 'parks').then(response => response.data)
   return {
@@ -27,8 +28,18 @@ export const createUser = (user) => {
     return userData
   })
 
+
   return {
     type: "CREATE_USER",
+    payload: response
+  }
+}
+
+export const createTrip = (trip) => {
+  const response = axios.post(URL + 'trip', trip).then(response => response.data)
+
+  return {
+    type: "CREATE_TRIP",
     payload: response
   }
 }
