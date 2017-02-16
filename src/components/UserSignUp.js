@@ -13,7 +13,7 @@ class UserSignUp extends Component{
 
   render() {
     return (
-      <div className="user-sign-up">
+      <div className="user-sign-up fl w-third">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input ref='name' placeholder='Enter Name' /><br/>
           <input ref='email' placeholder='Enter Email' /><br/>

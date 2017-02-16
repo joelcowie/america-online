@@ -10,14 +10,10 @@ class ParkDetails extends Component {
     }
 
     return (
-      <div className="ParkDetails">
-        <h3>{this.props.currentPark.name}</h3>
-        <h4>{this.props.currentPark.states}</h4>
-        <h4>{this.props.currentPark.description}</h4>
-        <h4>{this.props.currentPark.weatherInfo}</h4>
-        <h4>{this.props.currentPark.latLong}</h4>
-        <h4>{this.props.currentPark.url}</h4>
-
+      <div className="ParkDetails fl w-two-thirds" style={{backgroundImage: `url(${this.props.currentPark.image_url})`, backgroundSize: '100% 100%'}}>
+        <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
+        <h2 className="ParkDetailsText">{this.props.currentPark.states}</h2>
+        <h2 className="ParkDetailsText">{this.props.currentPark.description}</h2>
       </div>
     )
   }

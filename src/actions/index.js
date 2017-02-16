@@ -4,6 +4,7 @@ import {browserHistory} from 'react-router'
 
 const URL = 'http://localhost:3000/api/v1/'
 
+
 export const fetchParks = () => {
   const parks = axios.get(URL + 'parks').then(response => response.data)
   return {
