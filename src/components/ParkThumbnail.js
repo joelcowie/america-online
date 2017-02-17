@@ -3,11 +3,13 @@ import { connect } from 'react-redux'
 import ParkDetails from './ParkDetails'
 import {updateCurrentPark} from '../actions/index.js'
 import {bindActionCreators} from 'redux'
+import {browserHistory} from 'react-router'
 
 class ParkThumbnail extends Component {
 
   handleClick(e) {
     this.props.updateCurrentPark(this.props.park)
+    browserHistory.push(`/parks/${this.props.park.id}`)
   }
 
   render() {

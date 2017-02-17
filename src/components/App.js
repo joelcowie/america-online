@@ -27,15 +27,8 @@ class App extends Component {
         <nav className="dt w-100 border-box pa3 ph5-ns">
           <h3 className="dtc v-mid mid-gray link w-25">Roadtripper</h3>
           <Nav/>
-          </nav>
-        <MapImage/>
-        <TripForm/>
-        <ParkDetails/>
-        <UserSignUp/>
-        <UserLogIn/>
-        <ParkList>
-          <ParkThumbnail/>
-        </ParkList>
+        </nav>
+        {this.props.children}
       </div>
     )
   }

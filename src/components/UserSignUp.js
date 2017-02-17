@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { createUser } from '../actions/index'
 import { connect } from 'react-redux'
+import {browserHistory} from 'react-router'
 
 class UserSignUp extends Component{
 
@@ -9,12 +10,13 @@ class UserSignUp extends Component{
     event.preventDefault()
     const user = {name: this.refs.name.value, email: this.refs.email.value, password: this.refs.userPassword.value, password_confirmation: this.refs.passwordConfirmation.value}
     this.props.createUser(user)
+    browserHistory.push('/')
   }
 
   render() {
-    if (!this.props.signUp) {
-      return <div></div>
-    }
+    // if (!this.props.signUp) {
+    //   return <div></div>
+    // }
 
     return (
       <div className="user-sign-up fl w-third">

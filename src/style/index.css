@@ -2,14 +2,14 @@ body {
   margin: 40px;
   padding: 0;
   font-family: sans-serif;
-  background: white;
-  background-image: url('https://www.aviary.com/img/photo-landscape.jpg');
-  background-attachment: fixed;
+  /*background: white;*/
+  /*background-image: url('https://www.aviary.com/img/photo-landscape.jpg');*/
+  /*background-attachment: fixed;*/
 }
 
 .user-sign-up {
-  margin: 50px;
-  background-image: url('https://www.aviary.com/img/photo-landscape.jpg');
+  /*margin: 50px;*/
+  /*background-image: url('https://www.aviary.com/img/photo-landscape.jpg');*/
 }
 
 
@@ -39,4 +39,9 @@ ul {
 
 .AppTitle {
   text: white;
+}
+
+.MapImage {
+  margin: 50px;
+  display: inline-block;
 }
