@@ -27,7 +27,6 @@ export const createUser = (user) => {
     return userData
   })
 
-
   return {
     type: "CREATE_USER",
     payload: response
@@ -43,6 +42,17 @@ export const createTrip = (trip) => {
     payload: response
   }
 }
+
+export const addParkToTrip = (trippark) => {
+  const jwt = sessionStorage.getItem('jwt')
+  const response = axios.post(URL + 'trippark', {park: trippark.park, trip: trippark.trip, jwt: jwt}).then(response => response.data)
+
+  return {
+    type: "ADD_PARK_TO_TRIP",
+    payload: response
+  }
+}
+
 
 export const logInUser = (user) => {
   const response = axios.post(URL + 'login', user).then((userData) => {
@@ -72,31 +82,3 @@ export const logInUser = (user) => {
      payload: {}
    }
  }
-
-export const loginRender = () => {
-  return {
-    type: "LOGIN_RENDER",
-    payload: true
-  }
-}
-
-export const signUpRender = () => {
-  return {
-    type: "SIGN_UP_RENDER",
-    payload: true
-  }
-}
-
-export const tripFormRender = () => {
-  return {
-    type: "TRIP_FORM_RENDER",
-    payload: true
-  }
-}
-
-export const tripNameSubmit = () => {
-  return {
-    type: "TRIP_NAME_SUBMIT",
-    payload: false
-  }
-}

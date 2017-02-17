@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { logInUser } from '../actions/index'
 import { connect } from 'react-redux'
+import { browserHistory } from 'react-router'
 
 class UserLogIn extends Component{
 
@@ -9,14 +10,10 @@ class UserLogIn extends Component{
     event.preventDefault()
     const user = {email: this.refs.email.value, password: this.refs.userPassword.value}
     this.props.logInUser(user)
+    browserHistory.push('/')
   }
 
   render() {
-
-    if (!this.props.login) {
-      return <div></div>
-    }
-
     return (
       <div className="user-log-in fl w-third">
         <form onSubmit={this.handleSubmit.bind(this)}>

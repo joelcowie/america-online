@@ -1,4 +1,4 @@
-export default (state=[], action) => {
+export default (state={}, action) => {
   switch (action.type) {
     case "CREATE_TRIP":
       return action.payload

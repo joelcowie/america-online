@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { createTrip } from '../actions/index'
-import { tripNameSubmit } from '../actions/index'
 import { connect } from 'react-redux'
 import Modal from 'react-modal'
+import { browserHistory } from 'react-router'
 
 class TripForm extends Component{
 
@@ -11,15 +11,10 @@ class TripForm extends Component{
     event.preventDefault()
     const trip = {name: this.refs.name.value}
     this.props.createTrip(trip)
-    this.props.tripNameSubmit()
+    browserHistory.push('/')
   }
 
-
   render() {
-    if (!this.props.tripForm) {
-      return <div></div>
-    }
-
     return (
         <div className="trip-create fl w-third">
           <form onSubmit={this.handleSubmit.bind(this)}>
@@ -32,7 +27,7 @@ class TripForm extends Component{
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({createTrip, tripNameSubmit}, dispatch)
+  return bindActionCreators({createTrip}, dispatch)
 }
 
 function mapStateToProps(state) {

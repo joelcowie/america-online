@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { addParkToTrip } from '../actions/index'
 
 
 class ParkDetails extends Component {
+
+  handleButtonClick () {
+    this.props.addParkToTrip({park: this.props.currentPark, trip: this.props.trip})
+  }
 
   render() {
     if (!this.props.currentPark) {
@@ -14,6 +20,7 @@ class ParkDetails extends Component {
         <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
         <h2 className="ParkDetailsText">{this.props.currentPark.states}</h2>
         <h2 className="ParkDetailsText">{this.props.currentPark.description}</h2>
+        <button onClick={this.handleButtonClick.bind(this)}>Add to Trip</button>
       </div>
     )
   }
@@ -24,7 +31,13 @@ class ParkDetails extends Component {
 
 function mapStateToProps(state) {
   return {
-    currentPark: state.currentPark
+    currentPark: state.currentPark,
+    trip: state.trips
   }
 }
-export default connect(mapStateToProps)(ParkDetails)
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({addParkToTrip}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ParkDetails)

@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { logOutUser, signUpRender, loginRender, tripFormRender } from '../actions/index.js'
 import {bindActionCreators} from 'redux'
 import { Link } from 'react-router'
+import { browserHistory } from 'react-router'
+
 
 
 
@@ -32,14 +34,14 @@ class Nav extends Component {
       return (
         <div className="dtc v-mid w-75 tr">
           <Link className="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" to="/signup" title="Sign up">Sign up</Link>
-          <a className="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" onClick={this.handleClickLogin.bind(this)} title="Login">Login</a>
+          <Link className="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" to="/login" title="Login">Login</Link>
         </div>
       )
     } else {
       return (
         <div className="dtc v-mid w-75 tr">
-          <a className="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" onClick={this.handleClickMakeTrip.bind(this)} title="Make Trip">Make Trip</a>
-          <a className="link dim dark-gray f6 f5-ns dib" onClick={this.handleClickLogout.bind(this)} title="Logout">Logout</a>
+          <Link className="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" to='/trips/new' title="Make Trip">Make Trip</Link>
+          <Link className="link dim dark-gray f6 f5-ns dib" onClick={this.handleClickLogout.bind(this)} to='/' title="Logout">Logout</Link>
         </div>
       )
 

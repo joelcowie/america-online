@@ -1,6 +1,6 @@
-export default (state=false, action) => {
+export default (state=[], action) => {
   switch (action.type) {
-    case "SIGN_UP_RENDER":
+    case "ADD_PARK_TO_TRIP":
       return action.payload
     default:
       return state

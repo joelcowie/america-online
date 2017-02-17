@@ -4,6 +4,7 @@ import { createUser } from '../actions/index'
 import { connect } from 'react-redux'
 import {browserHistory} from 'react-router'
 
+
 class UserSignUp extends Component{
 
   handleSubmit(event) {
@@ -14,10 +15,6 @@ class UserSignUp extends Component{
   }
 
   render() {
-    // if (!this.props.signUp) {
-    //   return <div></div>
-    // }
-
     return (
       <div className="user-sign-up fl w-third">
         <form onSubmit={this.handleSubmit.bind(this)}>
