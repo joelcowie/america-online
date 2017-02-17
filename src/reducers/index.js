@@ -6,6 +6,7 @@ import currentUserReducer from './currentUserReducer'
 import tripsReducer from './tripsReducer'
 import signUpReducer from './signUpReducer'
 import loginReducer from './loginReducer'
+import tripFormReducer from './tripFormReducer'
 
 
 export default combineReducers({
@@ -15,5 +16,6 @@ export default combineReducers({
     trips: tripsReducer,
     currentUser: currentUserReducer,
     login: loginReducer,
-    signUp: signUpReducer
+    signUp: signUpReducer,
+    tripForm: tripFormReducer
   })

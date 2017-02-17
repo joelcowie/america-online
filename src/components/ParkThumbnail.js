@@ -24,6 +24,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({updateCurrentPark}, dispatch)
 }
 
-
-
 export default connect(null, mapDispatchToProps)(ParkThumbnail)

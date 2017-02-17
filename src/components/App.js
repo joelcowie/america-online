@@ -17,7 +17,7 @@ class App extends Component {
 
   componentDidMount() {
     if (sessionStorage.length !== 0) {
-      this.props.fetchUser()
+      this.props.fetchUser(sessionStorage.getItem('jwt'))
     }
   }
 
@@ -32,10 +32,10 @@ class App extends Component {
         <TripForm/>
         <ParkDetails/>
         <UserSignUp/>
+        <UserLogIn/>
         <ParkList>
           <ParkThumbnail/>
         </ParkList>
-        <UserLogIn/>
       </div>
     )
   }

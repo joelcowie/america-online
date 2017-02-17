@@ -3,6 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: white;
+  background-image: url('https://www.aviary.com/img/photo-landscape.jpg');
+  background-attachment: fixed;
 }
 
 .user-sign-up {
@@ -22,7 +24,7 @@ body {
 }
 
 .ParkDetailsText {
-  color: white;
+  color: black;
   margin: 30px;
 
 }

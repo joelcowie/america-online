@@ -57,7 +57,7 @@ export const logInUser = (user) => {
 }
 
  export const fetchUser = (jwt) => {
-   const response = axios.post(URL + 'current', jwt).then(response => response.data)
+   const response = axios.post(URL + 'current', {jwt: jwt}).then(response => response.data)
 
    return {
      type: "FETCH_USER",
@@ -84,5 +84,19 @@ export const signUpRender = () => {
   return {
     type: "SIGN_UP_RENDER",
     payload: true
+  }
+}
+
+export const tripFormRender = () => {
+  return {
+    type: "TRIP_FORM_RENDER",
+    payload: true
+  }
+}
+
+export const tripNameSubmit = () => {
+  return {
+    type: "TRIP_NAME_SUBMIT",
+    payload: false
   }
 }

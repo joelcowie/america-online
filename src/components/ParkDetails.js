@@ -10,7 +10,7 @@ class ParkDetails extends Component {
     }
 
     return (
-      <div className="ParkDetails fl w-two-thirds" style={{backgroundImage: `url(${this.props.currentPark.image_url})`, backgroundSize: '100% 100%'}}>
+      <div className="ParkDetails fl w-two-thirds" >
         <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
         <h2 className="ParkDetailsText">{this.props.currentPark.states}</h2>
         <h2 className="ParkDetailsText">{this.props.currentPark.description}</h2>
@@ -19,6 +19,8 @@ class ParkDetails extends Component {
   }
 }
 
+
+//style={{backgroundImage: `url(${this.props.currentPark.image_url})`, backgroundSize: '100% 100%'}}
 
 function mapStateToProps(state) {
   return {

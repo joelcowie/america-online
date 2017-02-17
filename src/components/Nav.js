@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { logOutUser, signUpRender, loginRender } from '../actions/index.js'
+import { logOutUser, signUpRender, loginRender, tripFormRender } from '../actions/index.js'
 import {bindActionCreators} from 'redux'
 
 
@@ -15,6 +15,9 @@ class Nav extends Component {
     this.props.loginRender()
   }
 
+  handleClickMakeTrip() {
+    this.props.tripFormRender()
+  }
 
   handleClickLogout() {
     this.props.logOutUser()
@@ -34,7 +37,8 @@ class Nav extends Component {
     } else {
       return (
         <div className="dtc v-mid w-75 tr">
-          <a className="link dim dark-gray f6 f5-ns dib " onClick={this.handleClickLogout.bind(this)} title="Logout">Logout</a>
+          <a className="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" onClick={this.handleClickMakeTrip.bind(this)} title="Make Trip">Make Trip</a>
+          <a className="link dim dark-gray f6 f5-ns dib" onClick={this.handleClickLogout.bind(this)} title="Logout">Logout</a>
         </div>
       )
 
@@ -44,7 +48,7 @@ class Nav extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ logOutUser, signUpRender, loginRender }, dispatch)
+  return bindActionCreators({ logOutUser, signUpRender, loginRender, tripFormRender}, dispatch)
 }
 
 
