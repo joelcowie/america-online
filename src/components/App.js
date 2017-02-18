@@ -10,7 +10,7 @@ import UserSignUp from './UserSignUp'
 import Nav from './Nav'
 import TripForm from './TripForm'
 import UserLogIn from './UserLogIn'
-import {fetchUser} from '../actions/index.js'
+import {fetchUser, updateCurrentTrip} from '../actions/index.js'
 import {bindActionCreators} from 'redux'
 
 class App extends Component {
@@ -18,6 +18,10 @@ class App extends Component {
   componentDidMount() {
     if (sessionStorage.length !== 0) {
       this.props.fetchUser(sessionStorage.getItem('jwt'))
+    }
+
+    if (this.props.currentTrip.trip !== {}) {
+      this.props.updateCurrentTrip()
     }
   }
 
@@ -35,9 +39,15 @@ class App extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({fetchUser}, dispatch)
+  return bindActionCreators({fetchUser, updateCurrentTrip}, dispatch)
+}
+
+function mapStateToProps(state) {
+  return {
+    currentTrip: state.currentTrip
+  }
 }
 
 
 
-export default connect(null, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)

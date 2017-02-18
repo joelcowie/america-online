@@ -53,6 +53,24 @@ export const addParkToTrip = (trippark) => {
   }
 }
 
+export const addParkToCurrentTrip = (currentPark) => {
+  return {
+    type: "ADD_PARK_TO_CURRENT_TRIP",
+    payload: currentPark
+  }
+}
+
+export const updateCurrentTrip = () => {
+  const jwt = sessionStorage.getItem('jwt')
+  const response = axios.post(URL + 'currenttrip', {jwt: jwt}).then(response => response.data)
+
+  return {
+    type: "UPDATE_CURRENT_TRIP",
+    payload: response
+  }
+}
+
+
 
 export const logInUser = (user) => {
   const response = axios.post(URL + 'login', user).then((userData) => {

@@ -5,6 +5,7 @@ import currentParkReducer from './currentParkReducer'
 import currentUserReducer from './currentUserReducer'
 import tripsReducer from './tripsReducer'
 import tripParksReducer from './tripParksReducer'
+import currentTripReducer from './currentTripReducer'
 
 
 
@@ -14,5 +15,6 @@ export default combineReducers({
     user: usersReducer,
     trips: tripsReducer,
     currentUser: currentUserReducer,
-    tripParks: tripParksReducer
+    tripParks: tripParksReducer,
+    currentTrip: currentTripReducer
   })
