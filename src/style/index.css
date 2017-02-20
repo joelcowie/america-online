@@ -51,3 +51,9 @@ ul {
   height: 750px;
   overflow-y: scroll;
 }
+
+.TripList {
+  position: fixed;
+  left: 800px;
+  top: 300px;
+}

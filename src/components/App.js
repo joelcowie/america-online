@@ -10,7 +10,7 @@ import UserSignUp from './UserSignUp'
 import Nav from './Nav'
 import TripForm from './TripForm'
 import UserLogIn from './UserLogIn'
-import {fetchUser} from '../actions/index.js'
+import {fetchUser, fetchTrip} from '../actions/index.js'
 import {bindActionCreators} from 'redux'
 
 class App extends Component {
@@ -19,6 +19,7 @@ class App extends Component {
     if (sessionStorage.length !== 0) {
       this.props.fetchUser(sessionStorage.getItem('jwt'))
     }
+    this.props.fetchTrip()
   }
 
   render() {
@@ -35,9 +36,7 @@ class App extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({fetchUser}, dispatch)
+  return bindActionCreators({fetchUser, fetchTrip}, dispatch)
 }
-
-
 
 export default connect(null, mapDispatchToProps)(App)

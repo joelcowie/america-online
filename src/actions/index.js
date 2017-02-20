@@ -87,3 +87,16 @@ export const logInUser = (user) => {
      payload: response
    }
  }
+
+ fetchTrip
+
+
+ export const fetchTrip = () => {
+   const jwt = sessionStorage.getItem('jwt')
+   const response = axios.post(URL + 'trip/find', {jwt: jwt}).then(response => response.data)
+
+   return {
+     type: "FETCH_TRIP",
+     payload: response
+   }
+ }
