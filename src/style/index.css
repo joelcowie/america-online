@@ -3,8 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   /*background: white;*/
-  /*background-image: url('https://www.aviary.com/img/photo-landscape.jpg');*/
-  /*background-attachment: fixed;*/
+  background-image: url('http://www.wheretowillie.com/wp-content/uploads/2013/12/Under-the-Double-Arch-Arches-National-Park-Moab-Utah.jpg');
+  background-attachment: fixed;
 }
 
 .user-sign-up {
@@ -24,12 +24,13 @@ body {
 }
 
 .ParkDetailsText {
-  color: black;
+  color: white;
   margin: 30px;
 
 }
 
 .ParkDetails {
+  padding: 10px;
   height: 750px;
 }
 
@@ -44,4 +45,9 @@ ul {
 .MapImage {
   margin: 50px;
   display: inline-block;
+}
+
+.ParkList {
+  height: 750px;
+  overflow-y: scroll;
 }

@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <nav className="dt w-100 border-box pa3 ph5-ns">
-          <h3 className="dtc v-mid mid-gray link w-25">Roadtripper</h3>
+          <h3 className="dtc v-mid white link w-25">Roadtripper</h3>
           <Nav/>
         </nav>
         {this.props.children}

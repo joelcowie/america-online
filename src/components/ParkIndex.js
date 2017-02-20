@@ -10,9 +10,10 @@ export default class ParkIndex extends Component {
     return (
       <div className="ParkIndex">
         <ParkList/>
-        <MapImage/>
         {this.props.children}
       </div>
     )
   }
 }
+
+// <MapImage/>
