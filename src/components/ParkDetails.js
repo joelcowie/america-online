@@ -19,13 +19,21 @@ class ParkDetails extends Component {
     if (!this.props.currentPark) {
       return <div></div>
     }
-    // let parkIds;
 
-    // if (this.props.currentTrip.parks) {
-      const parkIds = this.props.currentTrip.parks.map((park) => park.id)
-    // }
 
-    if (parkIds.includes(this.props.currentPark.id)) {
+    if (this.props.currentTrip.parks) {
+      var parkIds = this.props.currentTrip.parks.map((park) => park.id)
+    }
+
+    if (!this.props.currentTrip.parks) {
+      return (
+        <div className="ParkDetails fl w-two-thirds" >
+          <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
+          <h2 className="ParkDetailsText">{this.props.currentPark.states}</h2>
+          <h2 className="ParkDetailsText">{this.props.currentPark.description}</h2>
+        </div>
+      )
+    } else if (parkIds.includes(this.props.currentPark.id)) {
       return (
         <div className="ParkDetails fl w-two-thirds" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
