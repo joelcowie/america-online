@@ -33,15 +33,15 @@ class Nav extends Component {
     if (!this.props.user.name) {
       return (
         <div className="dtc v-mid w-75 tr">
-          <Link className="link dim white f6 f5-ns dib mr3 mr4-ns" to="/signup" title="Sign up">Sign up</Link>
-          <Link className="link dim white f6 f5-ns dib mr3 mr4-ns" to="/login" title="Login">Login</Link>
+          <Link className="link dim black f6 f5-ns dib mr3 mr4-ns" to="/signup" title="Sign up">Sign up</Link>
+          <Link className="link dim black f6 f5-ns dib mr3 mr4-ns" to="/login" title="Login">Login</Link>
         </div>
       )
     } else {
       return (
         <div className="dtc v-mid w-75 tr">
-          <Link className="link dim white f6 f5-ns dib mr3 mr4-ns" to='/trips/new' title="Make Trip">Make Trip</Link>
-          <Link className="link dim white f6 f5-ns dib" onClick={this.handleClickLogout.bind(this)} to='/' title="Logout">Logout</Link>
+          <Link className="link dim black f6 f5-ns dib mr3 mr4-ns" to='/trips/new' title="Make Trip">Make Trip</Link>
+          <Link className="link dim black f6 f5-ns dib" onClick={this.handleClickLogout.bind(this)} to='/' title="Logout">Logout</Link>
         </div>
       )
 

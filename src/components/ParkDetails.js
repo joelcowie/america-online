@@ -29,16 +29,18 @@ class ParkDetails extends Component {
       return (
         <div className="ParkDetails fl w-two-thirds" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
-          <h2 className="ParkDetailsText">{this.props.currentPark.states}</h2>
-          <h2 className="ParkDetailsText">{this.props.currentPark.description}</h2>
+          <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
+          <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
+          <img src={this.props.currentPark.image_url} />
         </div>
       )
     } else if (parkIds.includes(this.props.currentPark.id)) {
       return (
         <div className="ParkDetails fl w-two-thirds" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
-          <h2 className="ParkDetailsText">{this.props.currentPark.states}</h2>
-          <h2 className="ParkDetailsText">{this.props.currentPark.description}</h2>
+          <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
+          <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
+          <img src={this.props.currentPark.image_url} />
           <div className="">
             <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" onClick={this.handleButtonClickRemove.bind(this)}>Remove from Trip</button>
           </div>
@@ -48,8 +50,9 @@ class ParkDetails extends Component {
       return (
         <div className="ParkDetails fl w-two-thirds" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
-          <h2 className="ParkDetailsText">{this.props.currentPark.states}</h2>
-          <h2 className="ParkDetailsText">{this.props.currentPark.description}</h2>
+          <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
+          <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
+          <img src={this.props.currentPark.image_url} />
           <div className="">
             <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" onClick={this.handleButtonClickAdd.bind(this)}>Add to Trip</button>
           </div>
