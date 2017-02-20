@@ -12,7 +12,7 @@ class TripList extends Component {
 
     if (this.props.currentTrip.parks) {
       return (
-        <div className="TripList">
+        <div className="TripList fl w-20">
           <ul>{list}</ul>
         </div>
       )

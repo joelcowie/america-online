@@ -27,7 +27,7 @@ class ParkDetails extends Component {
 
     if (!this.props.currentTrip.parks) {
       return (
-        <div className="ParkDetails fl w-two-thirds" >
+        <div className="ParkDetails fl w-50" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
           <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
           <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
@@ -36,7 +36,7 @@ class ParkDetails extends Component {
       )
     } else if (parkIds.includes(this.props.currentPark.id)) {
       return (
-        <div className="ParkDetails fl w-two-thirds" >
+        <div className="ParkDetails fl w-50" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
           <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
           <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
@@ -48,7 +48,7 @@ class ParkDetails extends Component {
       )
     } else {
       return (
-        <div className="ParkDetails fl w-two-thirds" >
+        <div className="ParkDetails fl w-50" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
           <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
           <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>

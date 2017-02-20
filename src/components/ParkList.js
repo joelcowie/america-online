@@ -15,7 +15,7 @@ class ParkList extends Component {
   render() {
     var list = this.props.parks.map(park => <ParkThumbnail park = {park}/>)
     return (
-      <div className="ParkList fl w-25">
+      <div className="ParkList fl w-30">
         <ul>
           {list}
         </ul>
