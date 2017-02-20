@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="dt w-85 border-box pa3 ph5-ns">
+        <nav className="dt w-100 border-box pa3 ph5-ns">
           <h3 className="dtc v-mid black link w-25">National Parks</h3>
           <Nav/>
         </nav>
@@ -38,5 +38,7 @@ class App extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({fetchUser, fetchTrip}, dispatch)
 }
+
+
 
 export default connect(null, mapDispatchToProps)(App)

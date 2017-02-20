@@ -14,7 +14,7 @@ class TripThumbnail extends Component {
 
   render() {
     return (
-      <div onClick= {this.handleClick.bind(this)} className="TripThumbnail">
+      <div onClick= {this.handleClick.bind(this)} className="TripThumbnail dim">
         <h4 className="TripThumbnailText">{this.props.park.name}</h4>
       </div>
     )
