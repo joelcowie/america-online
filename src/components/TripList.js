@@ -6,6 +6,15 @@ import TripThumbnail from './TripThumbnail'
 
 class TripList extends Component {
   render() {
+
+    if (!this.props.currentTrip.parks) {
+      return (
+        <div className="TripList fl w-20">
+          <h1 className="TripListName">&uarr; Log in to make a trip!</h1>
+        </div>
+      )
+    }
+
     if (this.props.currentTrip.parks) {
       var list = this.props.currentTrip.parks.map(park => <div><TripThumbnail park = {park}/></div>)
     }
