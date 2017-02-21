@@ -79,3 +79,7 @@ ul {
 .TripListName {
   padding: 1.25vw 2vw;
 }
+
+.TripThumbnailText {
+  cursor: "pointer";
+}
