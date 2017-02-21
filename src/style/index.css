@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Sansita|Pacifico|Inconsolata|Fira+Sans+Condensed");
+
+nav {
+  font-family: "Fira Sans Condensed";
+}
+
 body {
   margin: 0px;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   background-color: #efefef;
   /*background: white;*/
   /*background-image: url('http://www.wheretowillie.com/wp-content/uploads/2013/12/Under-the-Double-Arch-Arches-National-Park-Moab-Utah.jpg');*/
@@ -32,9 +38,14 @@ body {
 }
 
 .ParkDetails {
+  /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
   padding: 1.25vw 2vw;
   height: 90vh;
   background-color: white;
+  overflow-y: scroll;
+  border-style: ridge;
+  border-width: thin;
+  border-color: lightgray;
 }
 
 ul {
@@ -57,8 +68,14 @@ ul {
 
 .TripList {
   float: right;
+  border-style: ridge;
+  border-width: thin;
+  border-color: lightgray;
+  height: 90vh;
+  background-color: white;
+  overflow-y: scroll;
 }
 
 .TripListName {
-  padding: 2vw;
+  padding: 1.25vw 2vw;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '../style/index.css'
 
+
 import MapImage from './MapImage'
 import ParkDetails from './ParkDetails'
 import ParkList from './ParkList'
@@ -26,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <nav className="dt w-100 border-box pa3 ph5-ns">
-          <h3 className="dtc v-mid black link w-25">National Parks</h3>
+          <h2 className="dtc v-mid black link w-25">National Parks</h2>
           <Nav/>
         </nav>
         {this.props.children}
@@ -38,7 +39,5 @@ class App extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({fetchUser, fetchTrip}, dispatch)
 }
-
-
 
 export default connect(null, mapDispatchToProps)(App)

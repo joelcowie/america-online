@@ -13,7 +13,7 @@ class TripList extends Component {
     if (this.props.currentTrip.parks) {
       return (
         <div className="TripList fl w-20">
-          <h3 className="TripListName">My Trip</h3>
+          <h2 className="TripListName">My Trip</h2>
           <ul>{list}</ul>
         </div>
       )

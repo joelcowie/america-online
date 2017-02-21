@@ -39,12 +39,12 @@ class ParkDetails extends Component {
         <div className="ParkDetails fl w-50" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
           <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
-          <img src={this.props.currentPark.image_url} />
-          <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
-
           <div className="">
             <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" onClick={this.handleButtonClickRemove.bind(this)}>Remove from Trip</button>
           </div>
+          <img src={this.props.currentPark.image_url} />
+          <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
+
         </div>
       )
     } else {
@@ -52,11 +52,11 @@ class ParkDetails extends Component {
         <div className="ParkDetails fl w-50" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
           <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
-          <img src={this.props.currentPark.image_url} />
-          <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
           <div className="">
             <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" onClick={this.handleButtonClickAdd.bind(this)}>Add to Trip</button>
           </div>
+          <img src={this.props.currentPark.image_url} />
+          <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
         </div>
       )
     }
