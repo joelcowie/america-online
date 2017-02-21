@@ -19,13 +19,10 @@ class ParkDetails extends Component {
       cursor: "pointer"
     }
 
-    if (!this.props.currentPark) {
-      return <div></div>
-    }
-
     if (this.props.currentTrip.parks) {
       var parkIds = this.props.currentTrip.parks.map((park) => park.id)
     }
+
 
     if (!this.props.currentTrip.parks) {
       return (

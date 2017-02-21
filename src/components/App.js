@@ -11,7 +11,7 @@ import UserSignUp from './UserSignUp'
 import Nav from './Nav'
 import TripForm from './TripForm'
 import UserLogIn from './UserLogIn'
-import {fetchUser, fetchTrip} from '../actions/index.js'
+import {fetchUser, fetchTrip, updateCurrentPark} from '../actions/index.js'
 import {bindActionCreators} from 'redux'
 import { Link } from 'react-router'
 
@@ -39,7 +39,7 @@ class App extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({fetchUser, fetchTrip}, dispatch)
+  return bindActionCreators({fetchUser, fetchTrip, updateCurrentPark}, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(App)

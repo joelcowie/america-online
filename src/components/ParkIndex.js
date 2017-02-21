@@ -12,6 +12,7 @@ export default class ParkIndex extends Component {
       <div className="ParkIndex">
         <ParkList/>
         <TripList/>
+        <ParkDetails/>
         {this.props.children}
       </div>
     )
