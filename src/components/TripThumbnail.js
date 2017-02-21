@@ -13,9 +13,12 @@ class TripThumbnail extends Component {
   }
 
   render() {
+    var buttonStyle = {
+      cursor: "pointer"
+    }
     return (
       <div onClick= {this.handleClick.bind(this)} className="TripThumbnail dim">
-        <h4 className="TripThumbnailText">{this.props.park.name}</h4>
+        <h4 className="TripThumbnailText" style={buttonStyle}>{this.props.park.name}</h4>
       </div>
     )
   }
