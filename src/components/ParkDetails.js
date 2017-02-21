@@ -56,7 +56,7 @@ class ParkDetails extends Component {
       return (
         <div className="ParkDetails fl w-50" >
           <div className="fr pa2">
-            <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" onClick={this.handleButtonClickAdd.bind(this)}>Add to Trip</button>
+            <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" style={buttonStyle} onClick={this.handleButtonClickAdd.bind(this)}>Add to Trip</button>
           </div>
           <div>
             <h2 className="ParkDetailsText fl w-50">{this.props.currentPark.name}</h2>
