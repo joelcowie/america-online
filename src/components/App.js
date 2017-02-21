@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="dt w-100 border-box pa3 ph5-ns">
+        <nav className="dt w-100 border-box ph5-ns">
           <Link className="dtc v-mid light-gray link w-25" to="/"><h2>Parks Explorer</h2></Link>
           <Nav/>
         </nav>
