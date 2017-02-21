@@ -23,8 +23,6 @@ body {
   top: 50vh;
   left: 50vw;
   margin: -112.675px 0 0 -166.475px;
-
-
 }
 
 
@@ -47,9 +45,9 @@ body {
 
 .ParkDetails {
   /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
-  margin: 0vw 2vw;
+  margin: 0vw 2.4vw;
   padding: 1.25vw 2vw;
-  height: 90vh;
+  height: 85vh;
   background-color: white;
   overflow-y: scroll;
   border-style: ridge;
@@ -71,7 +69,7 @@ ul {
 }
 
 .ParkList {
-  height: 90vh;
+  height: 85vh;
   overflow-y: scroll;
   /*margin: 0px 0px 20px 0px;*/
 }
@@ -81,7 +79,7 @@ ul {
   border-style: ridge;
   border-width: thin;
   border-color: lightgray;
-  height: 90vh;
+  height: 85vh;
   background-color: white;
   overflow-y: scroll;
 }
@@ -102,7 +100,7 @@ ul {
   cursor: "pointer";
   position: center;
   color: black;
-  margin: 40px 10px;
+  /*margin: 40px 10px;*/
 }
 /*
 .TripThumbnail {
