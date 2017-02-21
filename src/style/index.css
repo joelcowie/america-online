@@ -80,6 +80,14 @@ ul {
   overflow-y: scroll;
 }
 
+.login {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  margin: -112.675px 0 0 -166.475px;
+
+}
+
 .TripListName {
   padding: 1.25vw 2vw;
 }

@@ -11,8 +11,9 @@ export default (state={}, action) => {
     case 'FETCH_TRIP':
       return {trip: action.payload.trip, parks: action.payload.parks}
     case 'LOG_IN_USER':
-      // debugger
       return {trip: action.payload.data.trip, parks: action.payload.data.parks}
+    case 'LOG_OUT_USER':
+      return {trip: null, parks: null}
     default:
       return state
     }

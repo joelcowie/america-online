@@ -18,14 +18,21 @@ class UserLogIn extends Component{
     browserHistory.push('/')
   }
 
-
   render() {
     return (
-      <div className="user-log-in fl w-third">
+      <div className="login user-log-in fl w-third pa4 black-80">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input ref='email' placeholder='Enter Email' /><br/>
-          <input type='password' ref='userPassword' placeholder='Enter password'/><br/>
-          <button type='submit'>Submit</button>
+          <div className ="mt3">
+            <input className= "fc pa2 input-reset ba bg-transparent w-100 measure" ref='email' placeholder='Enter Email' /><br/>
+          </div>
+
+          <div className ="mt3">
+            <input className= "fc pa2 input-reset ba bg-transparent w-100 measure" type='password' ref='userPassword' placeholder='Enter password'/><br/>
+          </div>
+
+          <div className="mt3">
+            <button className="fc f6 link dim ph3 pv2 mb2 dib white bg-black" type='submit'>Submit</button>
+          </div>
         </form>
       </div>
     )
