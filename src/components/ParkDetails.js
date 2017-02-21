@@ -31,7 +31,7 @@ class ParkDetails extends Component {
       return (
         <div className="ParkDetails fl w-50" >
           <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
-          <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
+          <h3 className="ParkDetailsText fl w-50">{this.props.currentPark.states}</h3>
           <img src={this.props.currentPark.image_url} />
           <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
 
@@ -40,10 +40,12 @@ class ParkDetails extends Component {
     } else if (parkIds.includes(this.props.currentPark.id)) {
       return (
         <div className="ParkDetails fl w-50" >
-          <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
-          <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
-          <div className="">
+          <div className="fr pa2">
             <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" style={buttonStyle} onClick={this.handleButtonClickRemove.bind(this)}>Remove from Trip</button>
+          </div>
+          <div>
+            <h2 className="ParkDetailsText fl w-50">{this.props.currentPark.name}</h2>
+            <h3 className="ParkDetailsText fl w-50">{this.props.currentPark.states}</h3>
           </div>
           <img src={this.props.currentPark.image_url} />
           <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
@@ -53,10 +55,12 @@ class ParkDetails extends Component {
     } else {
       return (
         <div className="ParkDetails fl w-50" >
-          <h2 className="ParkDetailsText">{this.props.currentPark.name}</h2>
-          <h3 className="ParkDetailsText">{this.props.currentPark.states}</h3>
-          <div className="">
+          <div className="fr pa2">
             <button className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-near-black" onClick={this.handleButtonClickAdd.bind(this)}>Add to Trip</button>
+          </div>
+          <div>
+            <h2 className="ParkDetailsText fl w-50">{this.props.currentPark.name}</h2>
+            <h3 className="ParkDetailsText fl w-50">{this.props.currentPark.states}</h3>
           </div>
           <img src={this.props.currentPark.image_url} />
           <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>

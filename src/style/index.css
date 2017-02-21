@@ -39,6 +39,7 @@ body {
 
 .ParkDetails {
   /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
+  margin: 0px 30px;
   padding: 1.25vw 2vw;
   height: 90vh;
   background-color: white;
