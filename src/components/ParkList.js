@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ParkThumbnail from './ParkThumbnail'
-import { fetchParks } from '../actions/index.js'
+import { fetchParks, fetchTrip } from '../actions/index.js'
 
 
 
@@ -25,7 +25,7 @@ class ParkList extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({fetchParks}, dispatch)
+  return bindActionCreators({fetchParks, fetchTrip}, dispatch)
 }
 
 function mapStateToProps(state) {

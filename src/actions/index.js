@@ -30,6 +30,18 @@ export const createUser = (user) => {
   }
 }
 
+export const logInUser = (user) => {
+  const response = axios.post(URL + 'login', user).then((userData) => {
+    sessionStorage.setItem('jwt', userData.data.jwt)
+    return userData
+  })
+
+  return {
+    type: "LOG_IN_USER",
+    payload: response
+  }
+}
+
 export const createTrip = (trip) => {
   const jwt = sessionStorage.getItem('jwt')
   const response = axios.post(URL + 'trip', {trip: trip, jwt: jwt}).then(response => response.data)
@@ -50,17 +62,7 @@ export const addParkToTrip = (trippark) => {
   }
 }
 
-export const logInUser = (user) => {
-  const response = axios.post(URL + 'login', user).then((userData) => {
-    sessionStorage.setItem('jwt', userData.data.jwt)
-    return userData
-  })
 
-  return {
-    type: "LOG_IN_USER",
-    payload: response
-  }
-}
 
  export const fetchUser = (jwt) => {
    const response = axios.post(URL + 'current', {jwt: jwt}).then(response => response.data)

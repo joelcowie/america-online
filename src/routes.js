@@ -6,6 +6,7 @@ import ParkDetails from './components/ParkDetails'
 import ParkIndex from './components/ParkIndex'
 import UserLogIn from './components/UserLogIn'
 import TripForm from './components/TripForm'
+import {fetchTrip} from '../actions'
 // import TripList from './components/TripList'
 // import TripIndex from './components/TripIndex'
 

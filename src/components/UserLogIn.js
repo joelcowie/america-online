@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
-import { logInUser } from '../actions/index'
+import { logInUser, fetchTrip } from '../actions/index'
 import { connect } from 'react-redux'
 import { browserHistory } from 'react-router'
+import { Modal } from 'react-modal'
+import { afterOpenFn } from 'react-modal'
+import { requestCloseFn } from 'react-modal'
+import { closeTimeoutMS } from 'react-modal'
+import { customStyle } from 'react-modal'
 
 class UserLogIn extends Component{
 
@@ -12,6 +17,7 @@ class UserLogIn extends Component{
     this.props.logInUser(user)
     browserHistory.push('/')
   }
+
 
   render() {
     return (
@@ -26,8 +32,11 @@ class UserLogIn extends Component{
   }
 }
 
+// </Modal>
+// <Modal isOpen={false} onAfterOpen={afterOpenFn} onRequestClose={requestCloseFn} closeTimeoutMS={2} style={style} contentLabel="Modal">
+
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({logInUser}, dispatch)
+  return bindActionCreators({logInUser, fetchTrip}, dispatch)
 }
 
 function mapStateToProps(state){

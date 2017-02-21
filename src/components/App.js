@@ -13,6 +13,8 @@ import TripForm from './TripForm'
 import UserLogIn from './UserLogIn'
 import {fetchUser, fetchTrip} from '../actions/index.js'
 import {bindActionCreators} from 'redux'
+import { Link } from 'react-router'
+
 
 class App extends Component {
 
@@ -27,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <nav className="dt w-100 border-box pa3 ph5-ns">
-          <h2 className="dtc v-mid black link w-25">National Parks</h2>
+          <Link className="dtc v-mid light-gray link w-25" to="/"><h2>Parks Explorer</h2></Link>
           <Nav/>
         </nav>
         {this.props.children}

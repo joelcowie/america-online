@@ -2,6 +2,8 @@
 
 nav {
   font-family: "Fira Sans Condensed";
+  background-color: black;
+  margin: 0px 0px 20px 0px;
 }
 
 body {
@@ -23,7 +25,7 @@ body {
 .ParkThumbnail {
   padding: 20px;
   margin: 0px;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .ParkThumbnailText {
@@ -65,6 +67,7 @@ ul {
 .ParkList {
   height: 90vh;
   overflow-y: scroll;
+  /*margin: 0px 0px 20px 0px;*/
 }
 
 .TripList {
@@ -87,8 +90,8 @@ ul {
   color: black;
   margin: 40px 10px;
 }
-
-/*.TripThumbnail {
+/*
+.TripThumbnail {
   height: 50px;
   width: 180px;
 }*/
