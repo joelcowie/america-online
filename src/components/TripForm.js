@@ -16,10 +16,14 @@ class TripForm extends Component{
 
   render() {
     return (
-        <div className="trip-create fl w-third">
+        <div className="trip-create fl w-third pa4 black-80">
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <input ref='name' placeholder='Enter Name' /><br/>
-            <button type='submit'>Submit</button>
+          <div className ="mt3">
+            <input className= "fc pa2 input-reset ba bg-transparent w-100 measure" ref='name' placeholder='Enter Name' /><br/>
+          </div>
+          <div className ="mt3">
+            <button className="fc f6 link dim ph3 pv2 mb2 dib white bg-black" type='submit'>Submit</button>
+          </div>
           </form>
         </div>
     )

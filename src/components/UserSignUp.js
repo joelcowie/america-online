@@ -16,7 +16,7 @@ class UserSignUp extends Component{
 
   render() {
     return (
-      <div className="login user-sign-up fl w-third pa4 black-80">
+      <div className="user-sign-up fl w-third pa4 black-80">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div className ="mt3">
             <input className= "fc pa2 input-reset ba bg-transparent w-100 measure" ref='name' placeholder='Enter Name' /><br/>
