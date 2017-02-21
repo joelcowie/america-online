@@ -17,12 +17,15 @@ class TripThumbnail extends Component {
       cursor: "pointer"
     }
     return (
-      <div onClick= {this.handleClick.bind(this)} className="TripThumbnail dim">
-        <h4 className="TripThumbnailText" style={buttonStyle}>{this.props.park.name}</h4>
+      <div onClick= {this.handleClick.bind(this)} style={buttonStyle} className="TripThumbnail dim">
+        <h4 className="TripThumbnailText" >{this.props.park.name}</h4>
       </div>
     )
   }
 }
+
+//  f6 link dim ba ph3 mb2 dib light-gray
+
 // <h5 className="TripThumbnailText">{this.props.park.states}</h5>
 
 

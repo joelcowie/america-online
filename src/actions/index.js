@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {browserHistory} from 'react-router'
 
-const URL = 'http://localhost:3000/api/v1/'
+const URL = 'https://glacial-springs-61081.herokuapp.com/api/v1/'
 
 export const fetchParks = () => {
   const parks = axios.get(URL + 'parks').then(response => response.data)
