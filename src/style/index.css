@@ -47,7 +47,7 @@ body {
   /*font-family: "Lato", Helvetica, Arial, sans-serif;*/
   margin: 0vw 2.4vw;
   padding: 1.25vw 2vw;
-  height: 85vh;
+  height: 88vh;
   background-color: white;
   overflow-y: scroll;
   border-style: ridge;
@@ -69,7 +69,7 @@ ul {
 }
 
 .ParkList {
-  height: 85vh;
+  height: 88vh;
   overflow-y: scroll;
   /*margin: 0px 0px 20px 0px;*/
 }
