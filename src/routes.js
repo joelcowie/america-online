@@ -11,10 +11,11 @@ export default (
   <Route path='/' component={App}>
     <IndexRoute component={ParkIndex} />
     <Route path='parks' component={ParkIndex} >
-      <Route path=':id' component={ParkDetails} />
     </Route>
     <Route path='trips/new' component={TripForm} />
     <Route path='login' component={UserLogIn} />
     <Route path='signup' component={UserSignUp} />
   </Route>
 )
+
+//      <Route path=':id' component={ParkDetails} />

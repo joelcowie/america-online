@@ -31,7 +31,6 @@ class ParkDetails extends Component {
           <h3 className="ParkDetailsText fl w-50">{this.props.currentPark.states}</h3>
           <img src={this.props.currentPark.image_url} />
           <h4 className="ParkDetailsText">{this.props.currentPark.description}</h4>
-
         </div>
       )
     } else if (parkIds.includes(this.props.currentPark.id)) {
