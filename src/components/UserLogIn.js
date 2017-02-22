@@ -20,21 +20,27 @@ class UserLogIn extends Component{
 
   render() {
     return (
-      <div className="login user-log-in fl w-third pa4 black-80">
+      <div>
+      <div className="v-100 TripForm" style={{backgroundImage: 'url(https://fulltimegypsies.files.wordpress.com/2015/10/tunnel-view-panorama-ansel-adams-style.jpg)', backgroundRepeat: 'no-repeat', backgroundSize: '100%, 100%', backgroundAttachment: 'fixed'}}>
+      </div>
+      <div className="v-mid pa4 black-80 tc">
+        <h2 className="tc">Log In</h2>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <div className ="mt3">
-            <input className= "fc pa2 input-reset ba bg-transparent w-100 measure" ref='email' placeholder='Enter Email' /><br/>
+          <div className ="">
+            <input className= "fc ma3 pa3 input-reset ba bg-transparent w5 measure center tc" ref='email' placeholder='Enter Email' /><br/>
           </div>
 
-          <div className ="mt3">
-            <input className= "fc pa2 input-reset ba bg-transparent w-100 measure" type='password' ref='userPassword' placeholder='Enter password'/><br/>
+          <div className ="">
+            <input className= "fc ma2 pa3 input-reset ba bg-transparent w5 measure center tc" type='password' ref='userPassword' placeholder='Enter password'/><br/>
           </div>
 
-          <div className="mt3">
-            <button className="fc f6 link dim ph3 pv2 mb2 dib white bg-black" type='submit'>Submit</button>
+          <div className="">
+            <button className="fc f6 link dim ma3 ph3 pv2 mb2 dib white bg-black center measure tc" type='submit'>Submit</button>
           </div>
         </form>
       </div>
+      </div>
+
     )
   }
 }

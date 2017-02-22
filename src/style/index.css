@@ -108,9 +108,10 @@ ul {
   width: 180px;
 }*/
 
-.trip-create {
-  position: absolute;
+.TripForm {
+  height: 300px;
+  /*position: absolute;
   top: 50vh;
   left: 50vw;
-  margin: -112.675px 0 0 -166.475px;
+  margin: -112.675px 0 0 -166.475px;*/
 }

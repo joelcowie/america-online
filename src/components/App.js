@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App vh-100 dt w-100">
         <nav className="dt w-100 border-box ph5-ns">
           <Link className="dtc v-mid light-gray link w-25" to="/"><h2>Parks Explorer</h2></Link>
           <Nav/>
