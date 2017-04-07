@@ -19,7 +19,7 @@
 
 America Online uses Ruby on Rails for a custom API and a postgreSQL database. 
 
-### Front end
+#### Front end
 
 The front end is built using React and Redux. React allows for split-second rendering of components and DOM changes which creates a seamless user interface. Redux serves as a way to effectively manage the app's state. 
 
