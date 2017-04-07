@@ -13,7 +13,6 @@ weatherInfo: "Located on Mount Desert Island in Maine, Acadia experiences all fo
 export default (state=acadia, action) => {
   switch (action.type) {
     case 'UPDATE_CURRENT_PARK':
-    debugger
       return action.payload
     default:
       return state
