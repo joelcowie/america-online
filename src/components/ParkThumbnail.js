@@ -13,9 +13,6 @@ class ParkThumbnail extends Component {
   }
 
   render() {
-    var buttonStyle = {
-      cursor: "pointer"
-    }
 
     var thumbnailStyle = {
       backgroundImage: `url(${this.props.park.image_url})`,
